@@ -71,10 +71,6 @@
     .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s ease, transform .8s ease; }
     .reveal.in { opacity: 1; transform: none; }
 
-    /* Marquee */
-    @keyframes marquee { to { transform: translateX(-50%); } }
-    .marquee-track { animation: marquee 32s linear infinite; }
-
     .card-lift { transition: transform .35s ease, box-shadow .35s ease; }
     .card-lift:hover { transform: translateY(-6px); box-shadow: 0 24px 50px -18px rgba(131,24,67,.35); }
 
@@ -154,8 +150,8 @@
 
         <p class="text-lg md:text-xl text-pink-900/80 font-light max-w-xl mx-auto md:mx-0 leading-relaxed">
           Hi, I'm <strong class="font-semibold text-pink-700">Amna</strong> — I turn messy, manual workflows into AI-powered tools people actually enjoy using.
-          I went from sales assistant to <strong class="font-semibold text-pink-700">AI automation engineer</strong>, and I'm now earning my
-          <strong class="font-semibold text-pink-700">M.S. in Computer Science (AI) at Georgia Tech</strong>. When I'm not shipping code, I'm behind a camera.
+          I'm an <strong class="font-semibold text-pink-700">AI automation engineer</strong> and an
+          <strong class="font-semibold text-pink-700">M.S. Computer Science (AI) student at Georgia Tech</strong>. When I'm not shipping code, I'm behind a camera.
         </p>
 
         <div class="flex flex-wrap gap-3 justify-center md:justify-start">
@@ -210,18 +206,6 @@
     </div>
   </section>
 
-  <!-- ============ MARQUEE ============ -->
-  <div class="overflow-hidden py-4"><div class="relative py-5 bg-pink-900 text-pink-100 overflow-hidden -rotate-1 shadow-xl">
-    <div class="marquee-track flex whitespace-nowrap w-max text-xl md:text-2xl serif italic">
-      <div class="flex gap-10 pr-10">
-        <span>Python</span><span>✦</span><span>React</span><span>✦</span><span>Flask</span><span>✦</span><span>SQL</span><span>✦</span><span>Claude API</span><span>✦</span><span>OpenAI API</span><span>✦</span><span>RAG</span><span>✦</span><span>Workflow automation</span><span>✦</span><span>JavaScript</span><span>✦</span><span>Figma</span><span>✦</span><span>IT Support</span><span>✦</span><span>Photography</span><span>✦</span>
-      </div>
-      <div class="flex gap-10 pr-10" aria-hidden="true">
-        <span>Python</span><span>✦</span><span>React</span><span>✦</span><span>Flask</span><span>✦</span><span>SQL</span><span>✦</span><span>Claude API</span><span>✦</span><span>OpenAI API</span><span>✦</span><span>RAG</span><span>✦</span><span>Workflow automation</span><span>✦</span><span>JavaScript</span><span>✦</span><span>Figma</span><span>✦</span><span>IT Support</span><span>✦</span><span>Photography</span><span>✦</span>
-      </div>
-    </div>
-  </div></div>
-
   <!-- ============ ABOUT / EDUCATION ============ -->
   <section id="about" class="py-28 px-5 max-w-6xl mx-auto scroll-mt-24">
     <div class="grid lg:grid-cols-5 gap-12 items-start">
@@ -229,9 +213,9 @@
         <p class="uppercase tracking-[0.25em] text-xs font-bold text-pink-600 mb-3">About me</p>
         <h2 class="text-4xl md:text-6xl font-black text-pink-950 serif leading-tight">Code, care &amp; <span class="italic font-normal text-pink-700">curiosity.</span></h2>
         <p class="mt-6 text-lg text-pink-900/80 leading-relaxed">
-          I learn fastest by fixing real problems. At a grocery store, I started at the register and ended up building its AI support assistant,
-          an inventory system for 100+ products, and a Claude-powered tool that lets staff ask about stock in plain English.
-          At HIPnation, I helped pull five scattered patient-communication systems into one Communication Hub for clinic staff.
+          I build AI tools that solve real operational problems. At Cherians Inc., I built an AI customer-support assistant,
+          an inventory management system for 100+ products, and a Claude-powered RAG assistant that lets staff query stock and sales in plain English.
+          At HIPnation, I helped unify five patient-communication systems into a single Communication Hub for clinic staff.
         </p>
         <p class="mt-4 text-lg text-pink-900/80 leading-relaxed">
           I care just as much about how things <em>feel</em> as how they work — which is why I also run
@@ -240,8 +224,8 @@
 
         <div class="grid grid-cols-3 gap-3 mt-8">
           <div class="bg-white/80 rounded-2xl p-4 text-center border border-pink-100 shadow-sm">
-            <div class="text-3xl font-black serif text-pink-800">3.6</div>
-            <div class="text-xs font-semibold text-pink-600 mt-1">GPA</div>
+            <div class="text-3xl font-black serif text-pink-800">5</div>
+            <div class="text-xs font-semibold text-pink-600 mt-1">Systems unified</div>
           </div>
           <div class="bg-white/80 rounded-2xl p-4 text-center border border-pink-100 shadow-sm">
             <div class="text-3xl font-black serif text-pink-800">6</div>
@@ -275,7 +259,7 @@
             <div>
               <h3 class="text-2xl font-bold serif text-pink-950">Georgia State University</h3>
               <p class="text-pink-700 font-semibold mt-1">B.S. Computer Science · May 2026</p>
-              <p class="text-gray-600 mt-2">GPA 3.6 · Dean's List every semester (Fall 2023 – Spring 2026). Coursework in data structures, algorithms, databases, software engineering, operating systems, and cybersecurity.</p>
+              <p class="text-gray-600 mt-2">Dean's List every semester (Fall 2023 – Spring 2026). Coursework in data structures, algorithms, databases, software engineering, operating systems, and cybersecurity.</p>
             </div>
           </div>
         </div>
@@ -307,133 +291,83 @@
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
 
-      <!-- StudyBestie (featured) -->
-      <article class="reveal md:col-span-2 lg:col-span-2 relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-pink-900 via-pink-800 to-purple-900 text-white p-8 md:p-10 shadow-2xl shadow-pink-900/30 card-lift">
-        <div class="absolute -top-16 -right-16 w-72 h-72 bg-pink-500/40 rounded-full blur-3xl"></div>
-        <div class="absolute -bottom-20 left-1/3 w-72 h-72 bg-purple-500/30 rounded-full blur-3xl"></div>
-        <div class="relative grid md:grid-cols-5 gap-8 items-center">
-          <div class="md:col-span-3">
-            <span class="inline-block text-xs font-bold uppercase tracking-widest bg-white/15 border border-white/20 px-3 py-1 rounded-full">Featured · Live now</span>
-            <h3 class="text-4xl md:text-5xl font-black serif mt-4">StudyBestie</h3>
-            <p class="text-pink-100/90 mt-3 text-lg leading-relaxed">
-              A live productivity dashboard I took from idea to production as a solo developer — design, development, testing, and deployment. I still maintain and ship updates for real users, no separate engineering team.
-            </p>
-            <div class="flex flex-wrap gap-2 mt-5">
-              <span class="text-xs font-bold bg-white/10 border border-white/20 px-3 py-1 rounded-full">Solo build</span>
-              <span class="text-xs font-bold bg-white/10 border border-white/20 px-3 py-1 rounded-full">Productivity</span>
-              <span class="text-xs font-bold bg-white/10 border border-white/20 px-3 py-1 rounded-full">Spring 2026</span>
-            </div>
-            <div class="flex flex-wrap gap-3 mt-7">
-              <a href="https://studybestie.live" target="_blank" rel="noopener noreferrer" class="bg-white text-pink-900 px-5 py-3 rounded-xl font-bold flex items-center gap-2 hover:bg-pink-100 transition-colors">
-                Visit live site <span class="material-symbols-outlined text-base">open_in_new</span>
-              </a>
-              <a href="https://github.com/amna-muhammad/studybestie" target="_blank" rel="noopener noreferrer" class="border border-white/40 px-5 py-3 rounded-xl font-bold flex items-center gap-2 hover:bg-white/10 transition-colors">
-                <span class="material-symbols-outlined text-base">code</span> Source
-              </a>
-            </div>
-          </div>
-          <div class="md:col-span-2 hidden md:flex justify-center">
-            <div class="relative w-56 h-56">
-              <div class="absolute inset-0 rounded-[2.5rem] bg-white/10 border border-white/20 backdrop-blur rotate-6"></div>
-              <div class="absolute inset-0 rounded-[2.5rem] bg-white/15 border border-white/25 backdrop-blur -rotate-3 flex flex-col items-center justify-center gap-2">
-                <span class="text-7xl">📚</span>
-                <span class="serif italic text-2xl">study, but cuter</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- Derme -->
       <article class="reveal group bg-white rounded-[2rem] overflow-hidden border border-pink-100 shadow-xl shadow-pink-900/5 card-lift flex flex-col">
-        <div class="h-56 overflow-hidden bg-gradient-to-br from-pink-50 to-purple-50 p-5">
-          <img src="dermepic.jpg" alt="Derme skincare safety app preview" class="w-full h-full object-contain rounded-xl group-hover:scale-105 transition-transform duration-700" loading="lazy">
+        <div class="h-56 relative overflow-hidden bg-gradient-to-br from-pink-700 to-purple-700 flex items-center justify-center text-white">
+          <div class="absolute -top-10 -right-10 w-48 h-48 bg-white/20 rounded-full blur-2xl"></div>
+          <div class="relative w-24 h-24 rounded-3xl bg-white/20 border border-white/30 backdrop-blur flex items-center justify-center text-5xl group-hover:scale-110 transition-transform duration-500">📚</div>
         </div>
         <div class="p-7 flex flex-col flex-1">
-          <div class="flex items-center justify-between">
-            <span class="text-xs uppercase tracking-widest text-pink-600 font-bold">Health tech · Fall 2025</span>
-          </div>
-          <h3 class="text-2xl font-bold serif text-pink-950 mt-2">Derme</h3>
-          <p class="text-gray-600 mt-2 leading-relaxed flex-1">A React + Flask app that flags potential allergens in skincare. I designed the normalized SQL schemas behind it — 99% accuracy across the ingredient dataset — and ran Git, code review, and merges for our 5-person team.</p>
-          <div class="flex flex-wrap gap-2 mt-4">
-            <span class="text-xs font-bold bg-pink-50 text-pink-700 px-3 py-1 rounded-full">React</span>
-            <span class="text-xs font-bold bg-pink-50 text-pink-700 px-3 py-1 rounded-full">Flask</span>
-            <span class="text-xs font-bold bg-pink-50 text-pink-700 px-3 py-1 rounded-full">SQL</span>
-          </div>
-          <a href="https://github.com/amna-muhammad/Derme---Cosmetic-Wellness-Platform" target="_blank" rel="noopener noreferrer" class="mt-5 inline-flex items-center gap-1 font-bold text-pink-800 hover:text-pink-600">View on GitHub <span class="material-symbols-outlined text-base">arrow_outward</span></a>
+          <span class="text-xs uppercase tracking-widest text-pink-600 font-bold">Productivity · Spring 2026</span>
+          <h3 class="text-2xl font-bold serif text-pink-950 mt-2">StudyBestie</h3>
+          <p class="text-gray-600 mt-2 leading-relaxed flex-1">A live productivity dashboard I built solo from concept to production — design, development, testing, and deployment — and continue to maintain for active users.</p>
+          <div class="flex flex-wrap gap-2 mt-4"><span class="text-xs font-bold bg-pink-50 text-pink-700 px-3 py-1 rounded-full">Full-stack</span><span class="text-xs font-bold bg-pink-50 text-pink-700 px-3 py-1 rounded-full">Solo build</span><span class="text-xs font-bold bg-pink-50 text-pink-700 px-3 py-1 rounded-full">Live</span></div>
+          <div class="flex flex-wrap gap-5 mt-5 min-h-[1.5rem]"><a href="https://studybestie.live" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 font-bold text-pink-800 hover:text-pink-600">Live site <span class="material-symbols-outlined text-base">open_in_new</span></a><a href="https://github.com/amna-muhammad/studybestie" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 font-bold text-pink-800 hover:text-pink-600">Source <span class="material-symbols-outlined text-base">code</span></a></div>
         </div>
       </article>
 
-      <!-- MindGuard -->
       <article class="reveal group bg-white rounded-[2rem] overflow-hidden border border-pink-100 shadow-xl shadow-pink-900/5 card-lift flex flex-col">
         <div class="h-56 overflow-hidden bg-gradient-to-br from-pink-50 to-purple-50 p-5">
-          <img src="mindguard.jpg" alt="MindGuard project preview" class="w-full h-full object-contain rounded-xl group-hover:scale-105 transition-transform duration-700" loading="lazy">
+          <img src="dermepic.jpg" alt="Derme skincare safety app" class="w-full h-full object-contain rounded-xl group-hover:scale-105 transition-transform duration-700" loading="lazy">
+        </div>
+        <div class="p-7 flex flex-col flex-1">
+          <span class="text-xs uppercase tracking-widest text-pink-600 font-bold">Health tech · Fall 2025</span>
+          <h3 class="text-2xl font-bold serif text-pink-950 mt-2">Derme</h3>
+          <p class="text-gray-600 mt-2 leading-relaxed flex-1">A React + Flask app that flags potential allergens in skincare products. Designed normalized SQL schemas (99% dataset accuracy) and managed Git, code review, and merges for a 5-person team.</p>
+          <div class="flex flex-wrap gap-2 mt-4"><span class="text-xs font-bold bg-pink-50 text-pink-700 px-3 py-1 rounded-full">React</span><span class="text-xs font-bold bg-pink-50 text-pink-700 px-3 py-1 rounded-full">Flask</span><span class="text-xs font-bold bg-pink-50 text-pink-700 px-3 py-1 rounded-full">SQL</span></div>
+          <div class="flex flex-wrap gap-5 mt-5 min-h-[1.5rem]"><a href="https://github.com/amna-muhammad/Derme---Cosmetic-Wellness-Platform" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 font-bold text-pink-800 hover:text-pink-600">GitHub <span class="material-symbols-outlined text-base">arrow_outward</span></a></div>
+        </div>
+      </article>
+
+      <article class="reveal group bg-white rounded-[2rem] overflow-hidden border border-pink-100 shadow-xl shadow-pink-900/5 card-lift flex flex-col">
+        <div class="h-56 overflow-hidden bg-gradient-to-br from-pink-50 to-purple-50 p-5">
+          <img src="mindguard.jpg" alt="MindGuard AI mental health platform" class="w-full h-full object-contain rounded-xl group-hover:scale-105 transition-transform duration-700" loading="lazy">
         </div>
         <div class="p-7 flex flex-col flex-1">
           <span class="text-xs uppercase tracking-widest text-pink-600 font-bold">AI · Hacklytics 2025</span>
           <h3 class="text-2xl font-bold serif text-pink-950 mt-2">MindGuard</h3>
-          <p class="text-gray-600 mt-2 leading-relaxed flex-1">Real-time, personalized mental-health insights powered by a Python/Flask NLP sentiment backend. Iterating on user feedback lifted engagement 25% before we demoed the working MVP at Hacklytics.</p>
-          <div class="flex flex-wrap gap-2 mt-4">
-            <span class="text-xs font-bold bg-pink-50 text-pink-700 px-3 py-1 rounded-full">Python</span>
-            <span class="text-xs font-bold bg-pink-50 text-pink-700 px-3 py-1 rounded-full">Flask</span>
-            <span class="text-xs font-bold bg-pink-50 text-pink-700 px-3 py-1 rounded-full">NLP</span>
-          </div>
+          <p class="text-gray-600 mt-2 leading-relaxed flex-1">An AI mental-health platform delivering real-time, personalized insights through a Python/Flask NLP sentiment backend. Feedback-driven iteration lifted engagement 25%.</p>
+          <div class="flex flex-wrap gap-2 mt-4"><span class="text-xs font-bold bg-pink-50 text-pink-700 px-3 py-1 rounded-full">Python</span><span class="text-xs font-bold bg-pink-50 text-pink-700 px-3 py-1 rounded-full">Flask</span><span class="text-xs font-bold bg-pink-50 text-pink-700 px-3 py-1 rounded-full">NLP</span></div>
+          <div class="flex flex-wrap gap-5 mt-5 min-h-[1.5rem]"></div>
         </div>
       </article>
 
-      <!-- She Connect -->
       <article class="reveal group bg-white rounded-[2rem] overflow-hidden border border-pink-100 shadow-xl shadow-pink-900/5 card-lift flex flex-col">
-        <div class="h-56 overflow-hidden bg-gradient-to-br from-pink-50 to-purple-50 p-5">
-          <img src="sheconnect.jpg" alt="She Connect project preview" class="w-full h-full object-contain rounded-xl group-hover:scale-105 transition-transform duration-700" loading="lazy">
+        <div class="h-56 relative overflow-hidden bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center text-white">
+          <div class="absolute -top-10 -right-10 w-48 h-48 bg-white/20 rounded-full blur-2xl"></div>
+          <div class="relative w-24 h-24 rounded-3xl bg-white/20 border border-white/30 backdrop-blur flex items-center justify-center group-hover:scale-110 transition-transform duration-500"><span class="material-symbols-outlined" style="font-size:56px">smart_toy</span></div>
         </div>
         <div class="p-7 flex flex-col flex-1">
-          <span class="text-xs uppercase tracking-widest text-pink-600 font-bold">Women's safety · Hack-Hers 2024</span>
-          <h3 class="text-2xl font-bold serif text-pink-950 mt-2">She Connect</h3>
-          <p class="text-gray-600 mt-2 leading-relaxed flex-1">A women's safety community platform with a discussion forum, incident reporting, and help resources — presented at Hack-Hers @ GSU.</p>
-          <div class="flex flex-wrap gap-2 mt-4">
-            <span class="text-xs font-bold bg-pink-50 text-pink-700 px-3 py-1 rounded-full">Figma</span>
-            <span class="text-xs font-bold bg-pink-50 text-pink-700 px-3 py-1 rounded-full">HTML/CSS</span>
-            <span class="text-xs font-bold bg-pink-50 text-pink-700 px-3 py-1 rounded-full">JavaScript</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- Portfolio + AmnaBot -->
-      <article class="reveal group relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-purple-600 to-pink-500 text-white shadow-xl shadow-pink-900/10 card-lift flex flex-col">
-        <div class="h-56 flex items-center justify-center relative">
-          <div class="absolute inset-0 opacity-30" style="background-image: radial-gradient(circle at 30% 30%, #fff 0, transparent 40%);"></div>
-          <div class="w-24 h-24 rounded-3xl bg-white/20 border border-white/30 backdrop-blur flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-            <span class="material-symbols-outlined" style="font-size:56px">smart_toy</span>
-          </div>
-        </div>
-        <div class="p-7 flex flex-col flex-1 bg-white text-pink-950">
           <span class="text-xs uppercase tracking-widest text-pink-600 font-bold">AI · Spring 2026</span>
-          <h3 class="text-2xl font-bold serif mt-2">This Portfolio + AmnaBot</h3>
-          <p class="text-gray-600 mt-2 leading-relaxed flex-1">The site you're on. An LLM-powered chatbot and contact workflow answer about 80% of visitor questions automatically — on any screen size.</p>
-          <div class="flex flex-wrap gap-2 mt-4">
-            <span class="text-xs font-bold bg-pink-50 text-pink-700 px-3 py-1 rounded-full">LLM</span>
-            <span class="text-xs font-bold bg-pink-50 text-pink-700 px-3 py-1 rounded-full">Netlify Functions</span>
-            <span class="text-xs font-bold bg-pink-50 text-pink-700 px-3 py-1 rounded-full">Tailwind</span>
-          </div>
-          <button onclick="toggleChat()" class="mt-5 self-start inline-flex items-center gap-1 font-bold text-pink-800 hover:text-pink-600">Try AmnaBot <span class="material-symbols-outlined text-base">arrow_outward</span></button>
+          <h3 class="text-2xl font-bold serif text-pink-950 mt-2">Portfolio + AmnaBot</h3>
+          <p class="text-gray-600 mt-2 leading-relaxed flex-1">This site. An LLM-powered chatbot and contact workflow handle about 80% of visitor inquiries automatically, on every screen size.</p>
+          <div class="flex flex-wrap gap-2 mt-4"><span class="text-xs font-bold bg-pink-50 text-pink-700 px-3 py-1 rounded-full">LLM</span><span class="text-xs font-bold bg-pink-50 text-pink-700 px-3 py-1 rounded-full">Netlify Functions</span><span class="text-xs font-bold bg-pink-50 text-pink-700 px-3 py-1 rounded-full">Tailwind</span></div>
+          <div class="flex flex-wrap gap-5 mt-5 min-h-[1.5rem]"><button onclick="toggleChat()" class="inline-flex items-center gap-1 font-bold text-pink-800 hover:text-pink-600">Try AmnaBot <span class="material-symbols-outlined text-base">arrow_outward</span></button></div>
         </div>
       </article>
 
-      <!-- Employee Management -->
-      <article class="reveal group md:col-span-2 lg:col-span-3 bg-white rounded-[2rem] overflow-hidden border border-pink-100 shadow-xl shadow-pink-900/5 card-lift grid md:grid-cols-3">
-        <div class="h-56 md:h-auto overflow-hidden bg-gradient-to-br from-pink-50 to-purple-50 p-6 flex items-center justify-center">
-          <img src="management.jpg" alt="Employee Management System preview" class="max-h-52 w-auto object-contain rounded-xl group-hover:scale-105 transition-transform duration-700" loading="lazy">
+      <article class="reveal group bg-white rounded-[2rem] overflow-hidden border border-pink-100 shadow-xl shadow-pink-900/5 card-lift flex flex-col">
+        <div class="h-56 overflow-hidden bg-gradient-to-br from-pink-50 to-purple-50 p-5">
+          <img src="sheconnect.jpg" alt="She Connect women's safety platform" class="w-full h-full object-contain rounded-xl group-hover:scale-105 transition-transform duration-700" loading="lazy">
         </div>
-        <div class="p-7 md:p-10 md:col-span-2 flex flex-col justify-center">
+        <div class="p-7 flex flex-col flex-1">
+          <span class="text-xs uppercase tracking-widest text-pink-600 font-bold">Social impact · Hack-Hers 2024</span>
+          <h3 class="text-2xl font-bold serif text-pink-950 mt-2">She Connect</h3>
+          <p class="text-gray-600 mt-2 leading-relaxed flex-1">A women's safety community platform with a discussion forum, incident reporting, and help resources, presented at Hack-Hers @ GSU.</p>
+          <div class="flex flex-wrap gap-2 mt-4"><span class="text-xs font-bold bg-pink-50 text-pink-700 px-3 py-1 rounded-full">Figma</span><span class="text-xs font-bold bg-pink-50 text-pink-700 px-3 py-1 rounded-full">HTML/CSS</span><span class="text-xs font-bold bg-pink-50 text-pink-700 px-3 py-1 rounded-full">JavaScript</span></div>
+          <div class="flex flex-wrap gap-5 mt-5 min-h-[1.5rem]"></div>
+        </div>
+      </article>
+
+      <article class="reveal group bg-white rounded-[2rem] overflow-hidden border border-pink-100 shadow-xl shadow-pink-900/5 card-lift flex flex-col">
+        <div class="h-56 overflow-hidden bg-gradient-to-br from-pink-50 to-purple-50 p-5">
+          <img src="management.jpg" alt="Employee Management System" class="w-full h-full object-contain rounded-xl group-hover:scale-105 transition-transform duration-700" loading="lazy">
+        </div>
+        <div class="p-7 flex flex-col flex-1">
           <span class="text-xs uppercase tracking-widest text-pink-600 font-bold">Full-stack · Spring 2025</span>
-          <h3 class="text-3xl font-bold serif text-pink-950 mt-2">Employee Management System</h3>
-          <p class="text-gray-600 mt-3 leading-relaxed text-lg">A full-stack CRUD app on a structured data model that lets administrators create, update, and find employee, role, and organizational records in seconds.</p>
-          <div class="flex flex-wrap gap-2 mt-5">
-            <span class="text-xs font-bold bg-pink-50 text-pink-700 px-3 py-1 rounded-full">Python</span>
-            <span class="text-xs font-bold bg-pink-50 text-pink-700 px-3 py-1 rounded-full">SQL</span>
-            <span class="text-xs font-bold bg-pink-50 text-pink-700 px-3 py-1 rounded-full">CRUD</span>
-            <span class="text-xs font-bold bg-pink-50 text-pink-700 px-3 py-1 rounded-full">RBAC</span>
-          </div>
+          <h3 class="text-2xl font-bold serif text-pink-950 mt-2">Employee Management System</h3>
+          <p class="text-gray-600 mt-2 leading-relaxed flex-1">A full-stack CRUD application on a structured data model that lets administrators create, update, and retrieve employee, role, and organizational records.</p>
+          <div class="flex flex-wrap gap-2 mt-4"><span class="text-xs font-bold bg-pink-50 text-pink-700 px-3 py-1 rounded-full">Python</span><span class="text-xs font-bold bg-pink-50 text-pink-700 px-3 py-1 rounded-full">SQL</span><span class="text-xs font-bold bg-pink-50 text-pink-700 px-3 py-1 rounded-full">RBAC</span></div>
+          <div class="flex flex-wrap gap-5 mt-5 min-h-[1.5rem]"></div>
         </div>
       </article>
 
@@ -485,7 +419,7 @@
             <h3 class="text-2xl font-bold serif text-pink-950">Cherians Inc.</h3>
             <span class="text-sm font-semibold text-pink-600">Aug 2025 – Sep 2026 · Decatur, GA</span>
           </div>
-          <p class="text-pink-700 font-semibold">AI Automation Engineer <span class="text-pink-500 font-normal">(advanced from Sales Assistant)</span></p>
+          <p class="text-pink-700 font-semibold">AI Automation Engineer</p>
           <ul class="text-gray-600 mt-3 leading-relaxed space-y-2">
             <li class="flex gap-2"><span class="text-pink-400 mt-1">✦</span><span>Built an AI customer-support assistant in Python with the OpenAI API, backed by a searchable knowledge base, to answer product, order, and policy questions.</span></li>
             <li class="flex gap-2"><span class="text-pink-400 mt-1">✦</span><span>Built an end-to-end inventory system for 100+ grocery products, cutting stockouts and counting errors.</span></li>
