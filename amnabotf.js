@@ -36,6 +36,15 @@ document.addEventListener("DOMContentLoaded", () => {
   // Make it work with onclick="toggleChat()"
   window.toggleChat = toggleChat;
 
+  function escapeHtml(str) {
+    return String(str)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
+
   function addMessage(text, sender, isTemp = false) {
     const div = document.createElement("div");
     const id = "m_" + Date.now() + Math.random().toString(16).slice(2);
@@ -53,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
     div.innerHTML = `
       ${avatar}
       <div class="${bubble} p-3 rounded-2xl ${isBot ? "rounded-tl-none" : "rounded-tr-none"} text-sm border border-white/10 backdrop-blur-md max-w-[80%]">
-        ${String(text).replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")}
+        ${escapeHtml(text).replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")}
       </div>
     `;
 
